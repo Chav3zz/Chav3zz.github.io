@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            background-color: darkgreen;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav{
+            float: left;
+            width: 30%;
+            height: 300px;
+            background-color: green;
+            padding: 20px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        article{
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: limegreen;
+            height: 300px;
+        }
+        section::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer{
+            background-color: yellowgreen;
+            padding: 10px;
+            text-align: center;
+        }
+        @media(max-width: 600px){
+            nav, article{
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Videojuegos</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="">PC</a></li>
+                <li><a href="">Consolas</a></li>
+                <li><a href="">Teléfonos</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Lista de juegos en PC</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque laboriosam harum exercitationem aperiam modi rerum a, molestias cupiditate aspernatur vero nostrum quo enim. Inventore animi illum quae culpa, iusto a!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, accusantium reiciendis, cum, esse iste tempore provident officiis et tenetur totam molestias. Quaerat dolor consectetur ducimus voluptas temporibus magni maiores aliquam?
+            </p>
+        </article>
+    </section>
+    <footer>
+        <p>Videojuegos &copy; 2023</p>
+    </footer>
+</body>
+</html>
