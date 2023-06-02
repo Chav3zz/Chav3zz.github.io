@@ -14,6 +14,8 @@
     $pregunta9 = $_POST["pregunta9"];
     $pregunta10 = $_POST["pregunta10"];
 
+    echo "<h2>Examen hecho por: ".$nombre."</h2><hr>";
+
     echo "<h3>Pregunta 1: (".$pregunta1.")</h3>";
 
     if($pregunta1 == "b"){
@@ -85,7 +87,7 @@
     }else{
         echo "Tu respuesta es incorrecta, la correcta es la B :(" . "<hr>";
     }
-
+    
     if($calificacion >= 0 && $calificacion <=5){
         echo "<h3>Calificación: ".$calificacion.", Lo siento ".$nombre.", no aprobaste T_T</h3>";
     }else if($calificacion >= 6 && $calificacion <= 10){
