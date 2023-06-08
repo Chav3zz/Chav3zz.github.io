@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Juego del ahorcado</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Configurar Juego</h1><hr>
+            <form action="practica006.php" method="POST">
+                <div class="form-group">
+                    <label for="">Nombre del jugador:</label>
+                    <input type="text" required name="jugador" class="form-control">
+                </div><br>
+                <div class="form-group">
+                    <label for="">Palabra:</label>
+                    <input type="text" required name="palabra" class="form-control">
+                </div><br>
+                <div class="form-group">
+                    <label for=""># vidas:</label>
+                    <input type="number" required name="vidas" class="form-control">
+                </div><br>
+                <div>
+                    <input type="submit" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
