@@ -7,6 +7,7 @@
     <style>
         .casilla{
             height: 50px;
+            font-weight: bold;
         }
         .escalera{
             background-image: url('Escalerilla.png');
@@ -27,17 +28,18 @@
     ?>
     <div class="container">
         <h1>Práctica 7 - Tablero de serpientes y escaleras</h1><hr>
-        <form action="">
+        <form action="practica007.php" method="POST">
+            <input type="submit" value="Jugar" class="btn btn-success">
             <div class="row">
-                <?php
-                    for($i=100; $i>0; $i--){
-                        if($i == 4 ||$i == 9 ||$i == 20 ||$i == 28 ||$i == 40 ||$i = 63 ||$i == 71|| $i == 77|| $i == 80){
-                            echo "<div class='col-1 card m-1 casilla escalera' style='background-color:".$colores[rand(0,4)].";color:".$letra."'>".($i)."</div>";
-                        }else if($i == 17 ||$i == 54 ||$i == 62 ||$i == 64 ||$i == 87 ||$i == 93 ||$i == 95 ||$i == 99){
-                            echo "<div class='col-1 card m-1 casilla serpiente' style='background-color:".$colores[rand(0,4)].";color:".$letra."'>".($i)."</div>";
-                        }else{
-                            echo "<div class='col-1 card m-1 casilla' style='background-color:".$colores[rand(0,4)].";color:".$letra."'>".($i)."</div>";
-                        }
+            <?php
+                        for($i=100; $i>0; $i--){
+                            if($i == 4 || $i == 9 || $i == 33 || $i == 28 || $i == 40 || $i == 80 ||$i == 71 ||$i == 77){
+                                echo "<div class='col-1 card m-1 casilla escalera' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
+                            } else if($i == 17 || $i == 54 || $i == 58 || $i == 64 || $i == 87 || $i == 93 ||$i == 95 ||$i == 99 ||$i == 36){
+                                echo "<div class='col-1 card m-1 casilla serpiente' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
+                            } else {
+                                echo "<div class='col-1 card m-1 casilla' style='background-color:".$colores[rand(0,4)].";'>".$i."</div>";
+                            }
                     }
                 ?>
             </div>
